@@ -20,10 +20,7 @@ def find_nearby_recycling_places(item_description):
     return ["Recycling Center 1", "Recycling Center 2"]  # Placeholder
 
 # Streamlit app interface
-st.title('Recyclopedia')
-# Set the page config to make the app have a green theme
-# You can also use custom styles to add more green elements
-st.markdown(
+t.markdown(
     """
     <style>
     .stApp {
@@ -40,6 +37,10 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+st.title('Recyclopedia')
+# Set the page config to make the app have a green theme
+# You can also use custom styles to add more green elements
 
 st.header('Find out how to recycle your items and where')
 st.write('Upload an image of the item you wish to recycle, and we’ll tell you how!')
