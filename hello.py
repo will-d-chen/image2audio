@@ -22,18 +22,6 @@ def find_nearby_recycling_places(item_description):
 # Streamlit app interface
 st.title('Recyclopedia')
 # Set the page config to make the app have a green theme
-st.set_page_config(
-    page_title="Recyclopedia",
-    page_icon=":recycle:",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://www.example.com/help',
-        'Report a bug': "https://www.example.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
-)
-
 # You can also use custom styles to add more green elements
 st.markdown(
     """
