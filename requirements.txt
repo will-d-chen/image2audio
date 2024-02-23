@@ -1,0 +1,6 @@
+streamlit
+Pillow
+requests
+watchdog
+google-generativeai
+geocoder
