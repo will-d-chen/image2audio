@@ -20,7 +20,7 @@ def find_nearby_recycling_places(item_description):
     return ["Recycling Center 1", "Recycling Center 2"]  # Placeholder
 
 # Streamlit app interface
-t.markdown(
+st.markdown(
     """
     <style>
     .stApp {
