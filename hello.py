@@ -21,6 +21,37 @@ def find_nearby_recycling_places(item_description):
 
 # Streamlit app interface
 st.title('Recyclopedia')
+# Set the page config to make the app have a green theme
+st.set_page_config(
+    page_title="Recyclopedia",
+    page_icon=":recycle:",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.example.com/help',
+        'Report a bug': "https://www.example.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
+# You can also use custom styles to add more green elements
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #f0fff4;
+    }
+    .stButton>button {
+        background-color: #28a745;
+        color: white;
+    }
+    .stTextInput>div>div>input {
+        background-color: #e8f5e9;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.header('Find out how to recycle your items and where')
 st.write('Upload an image of the item you wish to recycle, and we’ll tell you how!')
