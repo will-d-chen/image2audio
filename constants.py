@@ -2,18 +2,30 @@ import os
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 LLM_OUTPUT_LENGTH_SIZE = 1024
+LOGO_PATH = "asset/logo.png"
 
 STREAMLIT_HOMEPAGE_CONTENT = """
 <style>
 .stApp {
-    background-color: #00bd84;
+    background-color: #81C784;
+}
+.reportview-container .markdown-text-container {
+    color: #ffffff;
+}
+.reportview-container .css-1d391kg {
+    color: #ffffff;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    font-weight: bold;
 }
 .stButton>button {
-    background-color: #28a745;
-    color: white;
+    color: #ffffff;
+    background-color: #4caf50;
 }
-.stTextInput>div>div>input {
-    background-color: #e8f5e9;
+.stFileUploader .css-1m6mopr {
+    color: #ffffff;
+    background-color: #4caf50;
 }
 </style>
 """
@@ -32,4 +44,5 @@ I can sell or recycle this item. Give top three locations based on the ratings a
 Make sure to include the address, phone number, and website for each location.
 Your locations should be relevant to the item in the image and should include recycling centers, donation centers, or other places where the item can be repurposed or recycled.
 Please ensure that the locations are within a reasonable distance from the user's current location.
+Give the output in a tabular format in markdown.
 """
