@@ -1,5 +1,4 @@
 import os
-import socket
 import streamlit as st
 import google.generativeai as genai
 
@@ -28,8 +27,6 @@ def main():
     st.title('Recyclopedia')
     st.header('Find out how to recycle your items and where')
     st.write('Upload an image of the item you wish to recycle, and we\'ll tell you how!')
-
-    st.write(f"HOSTNAME = {socket.gethostname()}")
 
     uploaded_image = st.file_uploader(
         "",
