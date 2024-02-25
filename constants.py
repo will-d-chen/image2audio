@@ -41,11 +41,20 @@ Your recommendations should be feasible for the average person to accomplish wit
 Please draw from your extensive database of knowledge to ensure the ideas are both unique and practical, highlighting any specific techniques or materials needed for the transformation.
 """
 
-RECYCLING_LOCATIONS_PROMPT = """
+RECYCLING_LOCATIONS_PROMPT_COORDINATES = """
 Based on the image give me all the locations nearby to geo-coordinates (latitude, longitude): ({}, {}).
 I can sell or recycle this item. Give top three locations based on the ratings and distance from the mentioned location's city. 
 Make sure to include the address, phone number, and website for each location.
 Your locations should be relevant to the item in the image and should include recycling centers, donation centers, or other places where the item can be repurposed or recycled.
 Please ensure that the locations are within a reasonable distance from the user's current location.
+Give the output in a tabular format in markdown.
+"""
+
+RECYCLING_LOCATIONS_PROMPT_DURHAM = """
+Based on the image give me all the locations nearby to Durham, NC, USA.
+I can sell or recycle this item. Give top three locations based on the ratings and distance from the mentioned location's city. 
+Make sure to include the address, phone number, and website for each location.
+Your locations should be relevant to the item in the image and should include recycling centers, donation centers, or other places where the item can be repurposed or recycled.
+Please ensure that the locations are within a reasonable distance from the given location.
 Give the output in a tabular format in markdown.
 """
