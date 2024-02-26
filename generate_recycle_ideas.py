@@ -19,13 +19,13 @@ images = []
 nsamples = 10
 
 for i in range(nsamples):
-    filename = f"image{i+1}.JPG"
+    filename = f"images_and_examples/image{i+1}.JPG"
     img = PIL.Image.open(filename)
     images.append(img)
 
-with open('example1.txt', 'r') as file:
+with open('images_and_examples/example1.txt', 'r') as file:
     example1 = file.read()
-with open('example2.txt', 'r') as file:
+with open('images_and_examples/example2.txt', 'r') as file:
     example2 = file.read()
 
 for j in range(3):
