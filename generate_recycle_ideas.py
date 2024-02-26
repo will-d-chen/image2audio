@@ -1,12 +1,6 @@
-import pathlib
-import textwrap
-
 import google.generativeai as genai
+import PIL.Image
 
-from IPython.display import display
-from IPython.display import Markdown
-
-# Or use `os.getenv('GOOGLE_API_KEY')` to fetch an environment variable.
 GOOGLE_API_KEY='AIzaSyDWlRdJLFr7v9nUWmADlypMM3CkPhc1_5U'
 
 genai.configure(api_key=GOOGLE_API_KEY)
@@ -17,7 +11,7 @@ for m in genai.list_models():
 
 model = genai.GenerativeModel('gemini-pro-vision')
 
-import PIL.Image
+
 
 images = []
 
