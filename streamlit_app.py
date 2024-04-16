@@ -117,12 +117,10 @@ def main():
             st.subheader("Prompt Generated:")
             st.markdown(instructions, unsafe_allow_html=True)
 
-
-
             if song_id:
-                print('Song generation initiated. Song ID:', song_id)
                 
                 # Wait for a few seconds to allow time for the song to be generated
+                st.write("generating music...")
                 time.sleep(20)
                 
                 song_info = get_song_info(song_id)
@@ -133,9 +131,9 @@ def main():
                      webbrowser.open_new_tab(song_info['audio_url'])
                 
                 else:
-                    print('Failed to retrieve song information.')
+                    st.write('Failed to retrieve song information.')
             else:
-                print('Failed to initiate song generation.')
+                st.write('Failed to initiate song generation.')
 
 
         else:
