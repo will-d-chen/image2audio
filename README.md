@@ -49,5 +49,5 @@ Contributions are what make the open-source community such a fantastic place to 
 ### Acknowledgements
 1. Gemini LLM
 2. Streamlit
-3. Your additional resources or acknowledgements
+3. Suno
 
