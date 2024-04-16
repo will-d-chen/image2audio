@@ -70,6 +70,12 @@ def main():
             st.subheader("Instructions on how to recycle the item:")
             st.markdown(instructions, unsafe_allow_html=True)
 
+        # Find nearby recycling places
+            recycling_places = find_nearby_recycling_places(image, gemini_model)
+            st.write("\n\n")
+            st.subheader("Nearby places where you can recycle:")
+            st.markdown(recycling_places, unsafe_allow_html=True)
+
             
         else:
             st.error("Could not get instructions for recycling this item.")
