@@ -128,7 +128,7 @@ def main():
                 if song_info:
                     st.subheader("Song Link:")
                     st.markdown(song_info['audio_url'], unsafe_allow_html=True)
-                     webbrowser.open_new_tab(song_info['audio_url'])
+                    webbrowser.open_new_tab(song_info['audio_url'])
                 
                 else:
                     st.write('Failed to retrieve song information.')
