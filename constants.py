@@ -34,11 +34,8 @@ h1, h2, h3, h4, h5, h6 {
 """
 
 RECYCLING_INSTRUCTIONS_PROMPT = """
-Based on the image of an item provided by the user, which represents a product they wish to recycle, repurpose, or upcycle, please analyze the item and generate one innovative and practical idea for extending its lifecycle.
-Your suggestions should focus on creative uses that go beyond traditional recycling methods, especially for items not typically considered recyclable.
-After identifying a potential new use, provide a detailed step-by-step guide on how the user can transform the item from its current state into the new, repurposed form.
-Your recommendations should be feasible for the average person to accomplish with common tools and materials.
-Please draw from your extensive database of knowledge to ensure the ideas are both unique and practical, highlighting any specific techniques or materials needed for the transformation.
+Based on the provided image, generate a theme for a song in words, with the template of "a [adj] song about ...", where the [adj] is the adjective describing the emotion of the song, 
+and fill out the rest of the sentence with a storytelling of the image. 3 sentences max.
 """
 
 RECYCLING_LOCATIONS_PROMPT_COORDINATES = """
