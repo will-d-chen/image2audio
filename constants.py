@@ -10,25 +10,30 @@ STREAMLIT_CLOUD_HOSTNAME = "localhost"
 STREAMLIT_HOMEPAGE_CONTENT = """
 <style>
 .stApp {
-    background-color: #81C784;
+    background-color: #E6E6FA;
 }
+
 .reportview-container .markdown-text-container {
-    color: #ffffff;
+    color: #4B0082;
 }
+
 .reportview-container .css-1d391kg {
-    color: #ffffff;
+    color: #4B0082;
 }
+
 h1, h2, h3, h4, h5, h6 {
-    color: #ffffff;
+    color: #4B0082;
     font-weight: bold;
 }
+
 .stButton>button {
-    color: #ffffff;
-    background-color: #4caf50;
+    color: #FFFFFF;
+    background-color: #9370DB;
 }
+
 .stFileUploader .css-1m6mopr {
-    color: #ffffff;
-    background-color: #4caf50;
+    color: #FFFFFF;
+    background-color: #9370DB;
 }
 </style>
 """
