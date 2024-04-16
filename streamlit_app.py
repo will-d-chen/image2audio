@@ -120,8 +120,16 @@ def main():
             if song_id:
                 
                 # Wait for a few seconds to allow time for the song to be generated
-                st.write("generating music...")
+                placeholder = st.empty()
+
+                # Write some text using st.write()
+                placeholder.write("generating music...")
+                
+                # Sleep for 3 seconds
                 time.sleep(20)
+                
+                # Replace the content of the placeholder with an empty string
+                placeholder.write("")
                 
                 song_info = get_song_info(song_id)
     
