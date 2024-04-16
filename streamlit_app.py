@@ -126,8 +126,7 @@ def main():
                 if song_info:
                     st.subheader("Song Link:")
                     st.markdown(song_info['audio_url'], unsafe_allow_html=True)
-                    audio_link = "song_info['audio_url']"
-                    st.audio(audio_link, format="audio/mp3", start_time=0)
+                    
                 
                 else:
                     print('Failed to retrieve song information.')
