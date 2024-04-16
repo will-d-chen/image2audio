@@ -4,6 +4,12 @@ import google.generativeai as genai
 
 from PIL import Image
 
+import requests
+import time
+
+SUNO_API_URL = 'https://suno-api-one-tau.vercel.app/api'
+SUNO_API_KEY = 'YOUR_SUNO_API_KEY'
+
 # Local
 from constants import *
 from util import *
@@ -13,6 +19,41 @@ def __get_gemini_client__() -> genai.GenerativeModel:
     genai.configure(api_key=GEMINI_API_KEY)
     gemini_model = genai.GenerativeModel("gemini-pro-vision")
     return gemini_model
+def generate_song(prompt):
+    url = f'{SUNO_API_URL}/generate'
+    headers = {
+        'Content-Type': 'application/json',
+        'Authorization': f'Bearer {SUNO_API_KEY}'
+    }
+    data = {
+        'prompt': prompt,
+        'make_instrumental': True,
+        'wait_audio': False
+    }
+    
+    try:
+        response = requests.post(url, headers=headers, json=data)
+        response.raise_for_status()
+        result = response.json()
+        return result[0]['id']
+    except requests.exceptions.RequestException as e:
+        print('Error generating song:', e)
+        return None
+
+def get_song_info(song_id):
+    url = f'{SUNO_API_URL}/get?ids={song_id}'
+    headers = {
+        'Authorization': f'Bearer {SUNO_API_KEY}'
+    }
+    
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        result = response.json()
+        return result[0]
+    except requests.exceptions.RequestException as e:
+        print('Error getting song information:', e)
+        return None
 
 def main():
     gemini_model = __get_gemini_client__()
@@ -24,9 +65,9 @@ def main():
     )
 
 
-    st.title('Recyclopedia')
-    st.header('Find out how to recycle your items and where')
-    st.write('Upload an image of the item you wish to recycle, and we\'ll tell you how!')
+    st.title('Image2Music')
+    st.header('Generate Music from Any Image')
+    st.write('Upload an image or art that you wish to turn into music')
 
     uploaded_image = st.file_uploader(
         "",
@@ -66,9 +107,32 @@ def main():
 
         # Get recycling instructions
         instructions = get_recycling_instructions(image, gemini_model)
+        prompt = instructions
+        song_id = generate_song(prompt)
         if instructions:
-            st.subheader("Instructions on how to recycle the item:")
+            st.subheader("Prompt Generated:")
             st.markdown(instructions, unsafe_allow_html=True)
+
+
+
+            if song_id:
+                print('Song generation initiated. Song ID:', song_id)
+                
+                # Wait for a few seconds to allow time for the song to be generated
+                time.sleep(20)
+                
+                song_info = get_song_info(song_id)
+    
+                if song_info:
+                    print('Generated Song Information:')
+                    print('Song Link:', song_info['audio_url'])
+                    print('Title:', song_info['title'])
+                    print('Lyrics:', song_info['lyric'])
+                    # Print other relevant information as needed
+                else:
+                    print('Failed to retrieve song information.')
+            else:
+                print('Failed to initiate song generation.')
 
 
         else:
