@@ -23,7 +23,7 @@ def main():
         unsafe_allow_html=True
     )
 
-    st.image(LOGO_PATH, width = 100)
+
     st.title('Recyclopedia')
     st.header('Find out how to recycle your items and where')
     st.write('Upload an image of the item you wish to recycle, and we\'ll tell you how!')
