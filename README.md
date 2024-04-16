@@ -1,3 +1,5 @@
+This repository is a port of recyclopedia by Ritu1412
+
 # Recyclopedia
 
 Recyclopedia is a cutting-edge web application powered by machine learning and large language models (LLMs) to help users recycle their old or used products effectively. With an intuitive interface, users can simply upload an image of the item they wish to recycle, and Recyclopedia provides detailed instructions on how to recycle it, as well as information on nearby recycling centers.
