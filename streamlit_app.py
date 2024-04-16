@@ -124,11 +124,10 @@ def main():
                 song_info = get_song_info(song_id)
     
                 if song_info:
-                    print('Generated Song Information:')
-                    print('Song Link:', song_info['audio_url'])
-                    print('Title:', song_info['title'])
-                    print('Lyrics:', song_info['lyric'])
-                    # Print other relevant information as needed
+                    st.subheader("Song Link:")
+                    st.markdown(song_info['audio_url'], unsafe_allow_html=True)
+                    
+                
                 else:
                     print('Failed to retrieve song information.')
             else:
