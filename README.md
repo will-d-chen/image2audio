@@ -1,4 +1,4 @@
-This repository is a port of recyclopedia by Ritu1412
+This repository is a port of recyclopedia by Ritu Toshniwal (ritu1412)
 
 # Recyclopedia
 
