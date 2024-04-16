@@ -31,7 +31,7 @@ def generate_song(prompt):
     }
     data = {
         'prompt': prompt,
-        'make_instrumental': False,
+        'make_instrumental': True,
         'wait_audio': False
     }
     
