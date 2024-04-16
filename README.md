@@ -30,11 +30,11 @@ To get a local copy up and running follow these simple steps:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/recyclopedia.git
+   git clone https://github.com/your-username/image2audio.git
 
 2. pip install -r requirements.txt
 
-3. streamlit run app.py
+3. streamlit run streamlit_app.py
 
 ### Contributing
 
