@@ -1,25 +1,20 @@
 This repository is a port of recyclopedia originally developed by Ritu Toshniwal (ritu1412)
 
-# Recyclopedia
-
-Recyclopedia is a cutting-edge web application powered by machine learning and large language models (LLMs) to help users recycle their old or used products effectively. With an intuitive interface, users can simply upload an image of the item they wish to recycle, and Recyclopedia provides detailed instructions on how to recycle it, as well as information on nearby recycling centers.
+# Image2Music
+This project is about combining the power of large language models with AI music-making tools such as Suno, to turn images into music. By doing so, we aim to create a unique method where pictures inspire music.
 
 ## Features
 
-- **Image Upload**: Users can upload an image of the item they want to recycle, and the app will analyze the image.
-- **Recycling Instructions**: Leveraging the power of LLMs, the app provides step-by-step instructions on how to prepare the item for recycling.
-- **Local Recycling Center Locator**: Recyclopedia helps users locate nearby recycling centers where they can take their items, ensuring that recyclable materials are processed correctly.
+- **Image Upload**: Users can upload an image of what they want to turn into music and the app will do the rest.
+- **Music**: Leveraging the power of Google Gemini and Suno, the app turns any image or art into music.
+
 
 ## How It Works
 
 1. **Upload Image**: Drag and drop or browse to upload an image of your recyclable item.
-2. **Processing**: The app uses a state-of-the-art LLM to understand the content of the image and generate recycling instructions.
-3. **Recycling Info**: Get information on how to recycle the item based on material and type.
-4. **Find a Recycling Center**: The app lists nearby centers where you can drop off your items, making recycling hassle-free.
+2. **Processing**: The app uses a state-of-the-art LLM to understand the content of the image and generate the audio description.
+3. **Song**: The music will be provided via a link that the user can stream in real-time
 
-### Demo Video
-
-![Demo Video](/asset/demo.mp4 "Demo Video")
 
 ## Getting Started
 
