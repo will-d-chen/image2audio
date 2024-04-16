@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 import google.generativeai as genai
-
+import webbrowser
 from PIL import Image
 
 import requests
@@ -14,7 +14,11 @@ SUNO_API_KEY = 'YOUR_SUNO_API_KEY'
 from constants import *
 from util import *
 
-
+def open_link_in_new_tab(url):
+    js = f"window.open('{url}', '_blank')"
+    html = f'<img src onerror="{js}">'
+    st.components.v1.html(html, height=0, width=0)
+    
 def __get_gemini_client__() -> genai.GenerativeModel:
     genai.configure(api_key=GEMINI_API_KEY)
     gemini_model = genai.GenerativeModel("gemini-pro-vision")
@@ -126,7 +130,7 @@ def main():
                 if song_info:
                     st.subheader("Song Link:")
                     st.markdown(song_info['audio_url'], unsafe_allow_html=True)
-                    
+                    open_link_in_new_tab(song_info['audio_url'])
                 
                 else:
                     print('Failed to retrieve song information.')
