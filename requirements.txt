@@ -4,4 +4,4 @@ requests
 watchdog
 google-generativeai
 geocoder
-webbrowser
+
