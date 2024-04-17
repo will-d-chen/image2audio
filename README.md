@@ -30,7 +30,7 @@ To get a local copy up and running follow these simple steps:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/image2audio.git
+   git clone https://github.com/will-d-chen/image2audio.git
 
 2. pip install -r requirements.txt
 
