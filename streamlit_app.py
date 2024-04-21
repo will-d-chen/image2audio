@@ -74,8 +74,8 @@ def main():
 
 
     st.title('SonicView')
-    st.header('Generate Music from Any Image')
-    st.write('Upload an image or art that you wish to turn into music')
+    st.header('Generate Background Music from in Game Images')
+    st.write('Bridging the Sensory Gap Between Sight and Sound')
 
     uploaded_image = st.file_uploader(
         "",
