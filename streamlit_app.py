@@ -73,7 +73,7 @@ def main():
     )
 
 
-    st.title('Image2Music')
+    st.title('SonicView')
     st.header('Generate Music from Any Image')
     st.write('Upload an image or art that you wish to turn into music')
 
