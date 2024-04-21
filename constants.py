@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 
 RECYCLING_INSTRUCTIONS_PROMPT = """
 Based on the provided image, generate a theme for a song in words, with the template of "a [adj] song about ...", where the [adj] is the adjective describing the emotion of the song, 
-and fill out the rest of the sentence with a storytelling of the image. 2 sentences max.
+and fill out the rest of the sentence with a storytelling of the image. 3 sentences max.
 """
 
 RECYCLING_LOCATIONS_PROMPT_COORDINATES = """
