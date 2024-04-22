@@ -9,7 +9,7 @@ import requests
 import time
 
 SUNO_API_URL = 'https://suno-api-one-tau.vercel.app/api'
-SUNO_API_KEY = 'YOUR_SUNO_API_KEY'
+SUNO_API_KEY = '-'
 
 # Local
 from constants import *
@@ -115,7 +115,7 @@ def main():
 
         # Get recycling instructions
         instructions = get_recycling_instructions(image, gemini_model)
-        prompt = instructions[:300]
+        prompt = instructions[:200]
         
         song_id = generate_song(prompt)
         if instructions:
