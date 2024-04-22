@@ -115,7 +115,7 @@ def main():
 
         # Get recycling instructions
         instructions = get_recycling_instructions(image, gemini_model)
-        prompt = instructions
+        prompt = instructions[:300]
         
         song_id = generate_song(prompt)
         if instructions:
