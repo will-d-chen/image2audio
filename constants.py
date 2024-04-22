@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 """
 
 RECYCLING_INSTRUCTIONS_PROMPT = """
-Based on the image from a game, generate a text describing the corresponding video game background music of this scene. 
+Based on the image from a game, generate a text describing the corresponding video game background music of this scene (no vocals). 
 Determine the theme, tempo, emotion, instruments, timbre of the music based on the game genre, the atmosphere, 
 and the player's mood. IMPORTANT: For the output, start with this template: a (emotion) song, with (instruments), describing (theme).  
 3 sentences max.
